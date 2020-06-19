@@ -6,7 +6,7 @@ public class UserValidater {
     private static final String NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9.+_-]+[@][a-zA-Z0-9]+[.]co(m|.in)$";
     private static final String PHONE_PATTERN = "^[0-9]{2}[0-9]{10}";
-    private static final String PASSWORD_PATTERN = "(?=.*[0-9])(?=.*[A-Z]).{8,40}";
+    private static final String PASSWORD_PATTERN = "(?=.*[0-9])(?=.*[A-Z])(?=.*\\d{1})(?=.*[@#$%!]{1}).{8,40}";
 
     public boolean validateFirstName(String firstName) {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
